@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:22:42 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 18:31:28 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 09:36:50 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if ((double)size > INT_MAX)
 		return (NULL);
-	ptr = malloc(count);
+	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
