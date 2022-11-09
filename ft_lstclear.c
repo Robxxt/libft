@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 10:47:53 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/06 10:53:08 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:07:16 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,17 @@ list must be set NULL.
 */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*temp;
+	t_list	*temp1;
+	t_list	*temp2;
 
 	if (!lst || !(*lst))
 		return ;
-	temp = *lst;
-	while (temp)
+	temp1 = *lst;
+	while (temp1)
 	{
-		ft_lstdelone(temp, del);
-		temp = temp->next;
+		temp2 = temp1->next;
+		ft_lstdelone(temp1, del);
+		temp1 = temp2;
 	}
 	*lst = NULL;
 }
