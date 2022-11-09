@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:16:12 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/06 20:51:39 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 09:47:42 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,13 @@ int	add_all_words_to_split(char **list, const char *s, char c)
 	return (1);
 }
 
-/*
-Return a list of strings from 's' separated by a character c
-*/
-
+/* Frees memory */
 void	*clear(char **arr)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while(arr[i])
+	while (arr[i])
 		free (arr[i++]);
 	free (arr);
 	return (NULL);
