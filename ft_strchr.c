@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:27:51 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/09 13:02:41 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 13:30:09 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strchr(const char *s, int c)
 {
 	if (!s || c % 255 == 0)
 		return (NULL);
-	if (c % 255 != 0)
-		return ((char *)s + ft_strlen(s));
 	while (*s)
 	{
 		if (*s == c)
 			return ((char *)s);
 		s++;
 	}
+	if (!ft_isascii(c) || c == '\0')
+		return ((char *)s);
 	return (NULL);
 }
