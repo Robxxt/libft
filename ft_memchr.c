@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:50:56 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 16:55:47 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 10:41:01 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	ls = (char *)s;
 	i = -1;
-	while ((++i < n - 1) && ls[i])
+	while (++i < n)
 	{
 		if (ls[i] == c)
 			return (ls + i);
 	}
-	if (c == '\0')
-		return (ls + i);
 	return (NULL);
 }
