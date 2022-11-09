@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:16:28 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/06 19:00:28 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 09:56:01 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,5 @@ is used to delete the content of a node if needed.
 */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*new_node;
-	t_list	*temp;
-
-	if (!lst || !f)
-		return (NULL);
-	temp = lst;
-	new_lst = ft_lstnew(f(temp->content));
-	if (!new_lst)
-	{
-		ft_lstclear(&lst, del);
-		return (NULL);
-	}
-	temp = temp->next;
-	while (temp)
-	{
-		new_node = f(temp->content);
-		if (!new_node)
-		{
-			ft_lstclear(&lst, del);
-			ft_lstclear(&new_lst, del);
-			break ;
-		}
-		temp = temp->next;
-		ft_lstadd_back(&new_lst, new_node);
-	}
-	return (new_lst);
+	return (NULL);
 }
