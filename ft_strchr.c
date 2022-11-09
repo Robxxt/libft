@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:27:51 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/09 13:35:23 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 14:31:08 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@ To pevent overflow I make sure that is not divisible by 255.
 */
 char	*ft_strchr(const char *s, int c)
 {
-	if (!s || c % 255 == 0)
+	int	i;
+
+	if (!s)
 		return (NULL);
-	while (*s)
+	i = -1;
+	while (s[++i])
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (s[i] == c)
+			return ((char *)s + i);
 	}
-	if (!ft_isascii(c) || c == '\0')
-		return ((char *)s);
+	if (s[i] == c || c % 256 == 0)
+		return ((char *)s + i);
 	return (NULL);
 }
