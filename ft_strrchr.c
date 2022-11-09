@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:52:31 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 16:14:01 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/09 14:42:14 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	while (i)
 	{
@@ -26,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	if (s[0] == c)
-		return ((char *)s);
+	if (s[i] == c || c % 256 == 0)
+		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
