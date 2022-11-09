@@ -63,7 +63,7 @@ clean:
 fclean: clean
 	@rm $(NAME)
 
-re: fclean all
+re: clean all
 
 bonus: all $(BONUS_OBJ)
 	ar rc $(NAME) $(BONUS_OBJ)
