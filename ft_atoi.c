@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:04:04 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 18:21:27 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/10 10:49:08 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	res = 0;
 	sign = 1;
-	while (*str == ' ' || *str == '0' || (*str >= 9 && *str <= 13))
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
