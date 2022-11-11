@@ -47,16 +47,17 @@ BONUS_SRC=ft_lstnew.c\
 BONUS_OBJ=$(BONUS_SRC:%.c=%.o)
 CFLAGS=-Wall -Wextra -Werror
 
-all:$(OBJ)
-	@echo "creating library ..."
-	@ar rc $(NAME) $^
-	@echo "done"
+all:$(NAME)
 
 $(OBJ):$(SRC)
 	@echo "creating objects ..."
 	@$(CC) -c $^
 	@echo "done"
 
+$(NAME): $(OBJ)
+	@echo "creating library ..."
+	@ar rc $(NAME) $^
+	@echo "done"
 clean:
 	@rm -f *.o
 
