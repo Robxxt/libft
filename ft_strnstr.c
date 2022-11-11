@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 17:18:23 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 18:07:49 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/11 12:21:44 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i < len && i < ft_strlen(haystack))
 	{
 		j = 0;
-		while (haystack[i] == needle[j] && i < len)
+		while (haystack[i + j] == needle[j] && i + j < len)
 		{
 			if (j == 0)
-				ptr = (char *)(haystack + i);
+				ptr = (char *)(haystack + i + j);
 			j++;
-			i++;
 			if (j == ft_strlen(needle))
 				return (ptr);
 		}
 		i++;
 	}
-	return ((void *)0);
+	return (NULL);
 }
