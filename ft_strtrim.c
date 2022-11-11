@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 08:03:58 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/05 09:14:30 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/11 10:53:21 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 		return (ft_strdup(""));
 	end = strim_right(s1, set);
 	len = end - start + 1;
-	new = malloc((len + 1) * sizeof(char));
-	if (!new)
-		return (NULL);
 	new = ft_substr(s1, start, len);
 	return (new);
 }
