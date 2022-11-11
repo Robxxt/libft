@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 07:42:34 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/06 18:40:55 by rdragan          ###   ########.fr       */
+/*   Updated: 2022/11/11 10:57:17 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	slen = ft_strlen(s);
 	max = slen - start;
-	if (max < 0)
-		max = 0;
 	if (slen < start)
 		len = 0;
 	if ((size_t)max > len)
