@@ -1,6 +1,6 @@
 # Libft
 
-In this repository I made som implementation of functions from the following libraries: `<stdlib.h>` , `<string.h>`, `<ctype.h>`.
+In this repository I made some implementation of functions from the following libraries: `<stdlib.h>` , `<string.h>`, `<ctype.h>`.
 
 ## More fun things.
 
