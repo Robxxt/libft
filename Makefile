@@ -51,7 +51,7 @@ all:$(NAME)
 
 $(OBJ):$(SRC)
 	@echo "creating objects ..."
-	@$(CC) -c $^
+	@$(CC) -c $(CFLAGS) $^
 	@echo "done"
 
 $(NAME): $(OBJ)
