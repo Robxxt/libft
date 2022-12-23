@@ -50,7 +50,6 @@ touch main.c
 
 5. Copy this code inside`main.c`.
 ```c
- 
  #include "libft.h"   // Here are the prototypes of my functions.
  
  int main(void)
