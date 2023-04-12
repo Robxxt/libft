@@ -1,6 +1,7 @@
-# Libft
+# Libft-Printf
 
 In this repository I made some implementation of functions from the following libraries: `<stdlib.h>` , `<string.h>`, `<ctype.h>`.
+As well as my onw implementation of printf from `<stdio.h>`
 
 ## More fun things.
 
