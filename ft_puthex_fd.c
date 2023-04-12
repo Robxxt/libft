@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:53:55 by rdragan           #+#    #+#             */
-/*   Updated: 2023/04/12 13:18:10 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/12 13:52:51 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ static int	get_len(unsigned int n)
 	return (len);
 }
 
+/*
+@set-param arg: Type of hex, uppercase X or lowercase x.
+*/
 static void	print_hex(unsigned int n, int arg, int fd)
 {
 	char	hex_base[16];

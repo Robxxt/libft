@@ -38,7 +38,8 @@ SRC=ft_isalpha.c\
 	get_next_line/get_next_line_utils.c\
 	ft_putaddr_fd.c\
 	ft_puthex_fd.c\
-	ft_putnbr_unsigned_fd.c
+	ft_putnbr_unsigned_fd.c\
+	ft_printf.c
 OBJ=$(SRC:.c=.o)
 BONUS_SRC=ft_lstnew.c\
 		ft_lstadd_front.c\
