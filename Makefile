@@ -65,3 +65,5 @@ fclean: clean
 	@rm $(NAME)
 
 re: clean all
+
+.PHONY: all, clean, fclean, re
