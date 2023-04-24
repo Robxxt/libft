@@ -6,12 +6,42 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 09:19:02 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/04 09:25:38 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/24 14:13:43 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
-Returns 1 if the character is digit otherwise 0
+Returns 1 if the string is composed only by numbers otherwise 0
+@param c: character
+*/
+int	ft_str_isdigit(char *str)
+{
+	int	i;
+	int	sign;
+
+	i = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i])
+	{
+		if (ft_isdigit(str[i]) == 0)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+/*
+Returns 1 if the character is number otherwise 0
 @param c: character
 */
 int	ft_isdigit(int c)
