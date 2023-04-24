@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:16:12 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/09 09:47:42 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/24 20:58:36 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ int	add_all_words_to_split(char **list, const char *s, char c)
 	return (1);
 }
 
-/* Frees memory */
-void	*clear(char **arr)
+/* Frees split memory */
+void	*free_split(char **arr)
 {
 	int	i;
 
@@ -85,7 +85,7 @@ char	**ft_split(const char *s, char c)
 	if (!split)
 		return (NULL);
 	if (!add_all_words_to_split(split, s, c))
-		return (clear(split));
+		return (free_split(split));
 	split[split_len] = NULL;
 	return (split);
 }
