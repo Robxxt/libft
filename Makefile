@@ -60,10 +60,10 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
 	@echo "done"
 clean:
-	@rm -f *.o
+	@rm -f $(OBJ)
 
 fclean: clean
-	@rm $(NAME)
+	@rm -f $(NAME)
 
 re: clean all
 
