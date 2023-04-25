@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 08:40:52 by rdragan           #+#    #+#             */
-/*   Updated: 2023/04/24 20:59:09 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/25 19:52:55 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ size_t	len(char *s);
 char	*j_strjoin(char *s1, char *s2);
 char	*j_substr(char *s1, size_t start, size_t end);
 int		indexof(char *s1, char c);
+long long	long_atoi(char *str);
 
 #endif
