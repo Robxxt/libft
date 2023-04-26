@@ -73,5 +73,5 @@ bonus: all $(BONUS_OBJ)
 
 $(BONUS_OBJ):$(BONUS_SRC)
 	@echo "creating bonus objects ..."
-	$(CC) -c $^
+	$(CC) -c $(CFLAGS) $^
 	@echo "done"
