@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 10:47:53 by rdragan           #+#    #+#             */
-/*   Updated: 2023/04/26 15:44:00 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:39:09 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	ft_lstclear(t_list **lst)
 	while (temp1)
 	{
 		temp2 = temp1->next;
-		ft_printf(1, "WTF!!\n");
 		ft_lstdelone(temp1);
 		temp1 = temp2;
 	}
