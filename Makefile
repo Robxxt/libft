@@ -69,7 +69,7 @@ fclean: clean
 re: clean all
 
 bonus: all $(BONUS_OBJ)
-	ar rc $(NAME) $(BONUS_OBJ)
+	@ar rc $(NAME) $(BONUS_OBJ)
 
 $(BONUS_OBJ):$(BONUS_SRC)
 	@echo "creating bonus objects ..."
