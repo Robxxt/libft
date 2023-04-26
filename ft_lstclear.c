@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 10:47:53 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/09 15:07:16 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/26 15:44:00 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@ list must be set NULL.
 @param del: address of the function used to delete the content
 			of the node
 */
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst)
 {
 	t_list	*temp1;
 	t_list	*temp2;
 
-	if (!lst || !(*lst))
+	if (lst == NULL)
 		return ;
 	temp1 = *lst;
 	while (temp1)
 	{
 		temp2 = temp1->next;
-		ft_lstdelone(temp1, del);
+		ft_printf(1, "WTF!!\n");
+		ft_lstdelone(temp1);
 		temp1 = temp2;
 	}
 	*lst = NULL;

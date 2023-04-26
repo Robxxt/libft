@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:16:28 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/09 17:13:51 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/26 15:38:54 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ is used to delete the content of a node if needed.
 @param f: address of the function used to iterate on the list.
 @param del: address of the function used to delete the content of a node.
 */
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_node;
@@ -36,7 +36,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(f(lst->content));
 		if (!new_node)
 		{
-			ft_lstclear(&new_lst, del);
+			ft_lstclear(&new_lst);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, new_node);

@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 10:44:10 by rdragan           #+#    #+#             */
-/*   Updated: 2022/11/06 11:07:44 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/04/26 15:38:08 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ and frees the node. The memory of next must not be freed.
 @param lst: node
 @param del: address of the function used to delete the content
 */
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst)
 {
-	if (!lst || !del)
+	if (!lst)
 		return ;
-	del(lst->content);
 	free(lst);
 }
