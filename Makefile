@@ -49,8 +49,7 @@ SRC=ft_isalpha.c\
 	ft_lstdelone.c\
 	ft_lstclear.c\
 	ft_lstiter.c\
-	ft_lstmap.c \
-	ft_lst_print.c
+	ft_lstmap.c
 OBJ=$(SRC:.c=.o)
 CFLAGS=-Wall -Wextra -Werror
 
@@ -60,6 +59,10 @@ $(NAME): $(OBJ)
 	@echo "creating library ..."
 	@ar rc $(NAME) $^
 	@echo "done"
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
 	@rm -f $(OBJ)
 
@@ -67,6 +70,3 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: clean all
-
-bonus: all
-	@ar rc $(NAME)
