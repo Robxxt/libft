@@ -40,18 +40,18 @@ SRC=ft_isalpha.c\
 	ft_putaddr_fd.c\
 	ft_puthex_fd.c\
 	ft_putnbr_unsigned_fd.c\
-	ft_printf.c
+	ft_printf.c \
+	ft_lstnew.c\
+	ft_lstadd_front.c\
+	ft_lstsize.c\
+	ft_lstlast.c\
+	ft_lstadd_back.c\
+	ft_lstdelone.c\
+	ft_lstclear.c\
+	ft_lstiter.c\
+	ft_lstmap.c \
+	ft_lst_print.c
 OBJ=$(SRC:.c=.o)
-BONUS_SRC=ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstsize.c\
-		ft_lstlast.c\
-		ft_lstadd_back.c\
-		ft_lstdelone.c\
-		ft_lstclear.c\
-		ft_lstiter.c\
-		ft_lstmap.c
-BONUS_OBJ=$(BONUS_SRC:%.c=%.o)
 CFLAGS=-Wall -Wextra -Werror
 
 all:$(NAME)
@@ -61,17 +61,12 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
 	@echo "done"
 clean:
-	@rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: clean all
 
-bonus: all $(BONUS_OBJ)
-	@ar rc $(NAME) $(BONUS_OBJ)
-
-$(BONUS_OBJ):$(BONUS_SRC)
-	@echo "creating bonus objects ..."
-	$(CC) -c $(CFLAGS) $^
-	@echo "done"
+bonus: all
+	@ar rc $(NAME)

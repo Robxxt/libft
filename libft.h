@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 03:18:46 by rdragan           #+#    #+#             */
-/*   Updated: 2023/05/13 03:18:47 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/09/16 13:36:34 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstdelone(t_list *lst);
 void		ft_lstclear(t_list **lst);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
+void		ft_lst_print(t_list *root);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *));
 int			ft_printf(int fd, const char *text, ...);
 char		*j_free(char *str);
