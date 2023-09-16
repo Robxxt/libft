@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:22:26 by rdragan           #+#    #+#             */
-/*   Updated: 2023/09/16 13:45:57 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/09/09 17:06:45 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			k++;
 		}
 		else
-        {
-            break ;
-        }
+		{
+			break ;
+		}
 		i++;
 		j++;
 	}
