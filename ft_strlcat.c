@@ -6,7 +6,7 @@
 /*   By: rdragan <rdragan@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:22:26 by rdragan           #+#    #+#             */
-/*   Updated: 2023/09/09 17:06:45 by rdragan          ###   ########.fr       */
+/*   Updated: 2023/11/04 08:04:11 by rdragan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (j < slen)
 	{
 		if (i < dstsize - 1)
-		{
-			dst[k] = src[j];
-			k++;
-		}
+			dst[k++] = src[j];
 		else
 		{
 			break ;
